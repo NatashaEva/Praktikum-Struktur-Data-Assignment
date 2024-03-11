@@ -179,7 +179,7 @@ int main() {
 }
 ```
 #### Output:
-![image](https://github.com/NatashaEva/PrakStrukData/assets/161322715/ae471707-327b-425a-a8a0-e0eb4e24933e)
+![image](https://github.com/NatashaEva/Praktikum-Struktur-Data-Assignment/assets/161322715/525a46a1-5ff8-4c21-a9dc-9f63f079f831)
 
 
 
@@ -228,7 +228,7 @@ int main() {
 }
 ```
 ### Output
-![image](https://github.com/NatashaEva/PrakStrukData/assets/161322715/7d1c177a-480c-48a8-b99d-90f04b3080f0)
+![image](https://github.com/NatashaEva/Praktikum-Struktur-Data-Assignment/assets/161322715/635f0740-ca04-4714-a79c-b2d8a8469dc6)
 
 Pada struct, secara default bersifat public atau dapat diakses dari mana saja maka kontrol terhdapat data kurang ketat dan digunakan ketika struktur data yang digunakan sederhana. Sedangkan pada class, secara default bersifat private atau hanya dapat diakses dari dalam class saja, class memungkinkan data dan fungsi dioperasikan menjadi satu bagian, dan class juga memungkinkan pengguna untuk membuat subclass dari class lain.
 
@@ -272,8 +272,7 @@ int main() {
 ```
 
 ### Output
-![image](https://github.com/NatashaEva/PrakStrukData/assets/161322715/e0236bad-5874-4223-8ed7-0434243b87f0)
-
+![image](https://github.com/NatashaEva/Praktikum-Struktur-Data-Assignment/assets/161322715/98485e13-9fc2-4b7b-93c7-b80c0fac6652)
 Pada program diatas menggunakan tipe data int sebagai value dan string sebagai key. Dan ditambahkan 5 elemen ke map. Dan menggunakan fungsi find untuk mencari berat badan Jajang. Kemudian menggunakan perluangan berupa for.
 Pada array, elemennya diakses menggunakan indeks yang dimulai dari 0, array biasanya hanya digunakan untuk menyimpan tipe data yang sama, ukuran array biasanya tidak dapat diubah setelah dilakukan deklarasi fungsi.
  Sedangkan pada map, elemennya diakses menggunakan key yang unik dan berbagai tipe data dan memungkinkan pengguna untuk mecari elemen tertentu tanpa mengetahui posisinya, urutan elemen dalam map tidak diurutkan dalam aturan penambahan dapat berbeda-beda, ukuran dalam map dapat diubah ubah seiring dengan penambahan dan penghapusan elemen.
