@@ -3,7 +3,7 @@
 
 ## Dasar Teori
 
-Tipe data adalah sebuah jenis nilai yang akan ditampung oleh sebuah variabel. Tipe data ini wajib ada ketika akan membuat sebuah variabel, agar variabel tersebut memiliki nilai yang spesifik. Dalam C++, tipe data terbagi menjadi tiga biagian, yaitu tipe data primitif, tipe data abstrak, dan tipe data koleksi.
+Array adalah suatu struktur yang terdiri dari sejumlah elemen yang memiliki tipe data yang sama. Array dibagi menjadi beberpa jenis yaitu :
 
 ### Tipe Data Primitif
 Tipe data primmitif adalah tipe data dasar yang tidak diturunkan oleh tipe data lain. Contoh tipe data primiif antara lain :
