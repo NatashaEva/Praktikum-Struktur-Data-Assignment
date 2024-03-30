@@ -185,9 +185,9 @@ int main() {
 ![image](https://github.com/NatashaEva/Praktikum-Struktur-Data-Assignment/assets/161322715/5bdda1fe-eb76-4c94-82b9-bd1ab52020a0)
 
 Program diatas menggunakan algoritma selection sort untuk mengurutkan nilai IPS mahasiswa. Algoritma ini bekerja dengan cara mencari nilai terkecil dalam array kemudian menukarnya dengan nilai di indeks awal, proses penukaran ini dilakukan secara berulang ulang hingga elemen array telah berurutan. Program ini memiliki variabel ips yang digunakan untuk menyimpan nilai IPS mahasiswa sebanyak n elemen, variabel temp digunakan sebagai penyimpan sementara, variabel min sebagai indeks minimum saat ini, dan variabel i dan j sebagai variabel loop. Proses looping for pertama mengulang dari 0 hingga n-1, disini min akan diinisialisasi dengan nilai i. Kemudia
- looping for kedua akan mengulang i+1 hingga n, disini nilai paling kecil dalam array akan dicari dengan membandingkan ips[j] dengan ips[min]. Jika ips[j] lebih besar dari ips[min] maka min akan diperbarui dengan nilai j.
+ looping for kedua akan mengulang i+1 hingga n, disini nilai paling kecil dalam array akan dicari dengan membandingkan ips[j] dengan ips[min]. Jika ips[j] lebih besar dari ips[min] maka min akan diperbarui dengan nilai j. Program ini menggunakan selection sort dengan time complexity O(n^2), secara keseluruhan yaitu O(1) + O(n^2) + O(n) = O(n^2). 
 
-
+ 
 ### 2. Pak RT memiliki 10 warga dengan nama: siti, situ, sana, ana, ani, caca, cici, dida, dodo, dan dadi. Supaya mudah dalam melakukan pencarian, Pak RT akan mengurutkan namanama tersebut sesuai dengan alfabet. Buatlah program untuk membantu Pak RT dengan menggunakan algoritma Bubble Sort!
 
 
@@ -251,8 +251,8 @@ int main() {
 ![image](https://github.com/NatashaEva/Praktikum-Struktur-Data-Assignment/assets/161322715/16e4a1f1-c0f3-4aec-b19b-01bdf0a37756)
 
 
-Program diatas digunakan untuk mengurutkan nama warga Pak RT sesuai alfabet A-Z menggunakan bubble sorting. Algoritma bublle sort dilakukan berulang kali dengan membandingkan elemen elemen yang berdekatan dan menukarnya jika tidak sesuai. Program ini memiliki variabel boolean not_sorted yang diinisialisasi dengan true yang menandakan bahwa pengurutan belum selesai, variabel integer j diinisialisasi dengan 0 untuk melacak perulangan loop, dan variabel string tmp digunakan untuk menyimpan data sementara ketika melakukan perulangan elemen. Proses looping pada program ini dimulai pada looping for dijalankan dengan mengulang indeks 0 hingga n-j-1, proses ini untuk membandingkan elemen elemen yang berdekatan, kecuali elemen yang sudah terurut. Selanjutnya memeriksa apakah elemen nama[i] lebih besar secara alfabet daripada elemen berikutnya nama[i+1]. Jika elemen tidak berurutan maka elemen akan ditukar dengan menggunakan variabel tmp = nama[i] untuk menyimpan elemen, kemudian nama[i] = nama[i+1] untuk memindahkan elemen berikutnya ke elemen saat ini.
-
+Program diatas digunakan untuk mengurutkan nama warga Pak RT sesuai alfabet A-Z menggunakan bubble sorting. Algoritma bublle sort dilakukan berulang kali dengan membandingkan elemen elemen yang berdekatan dan menukarnya jika tidak sesuai. Program ini memiliki variabel boolean not_sorted yang diinisialisasi dengan true yang menandakan bahwa pengurutan belum selesai, variabel integer j diinisialisasi dengan 0 untuk melacak perulangan loop, dan variabel string tmp digunakan untuk menyimpan data sementara ketika melakukan perulangan elemen. Proses looping pada program ini dimulai pada looping for dijalankan dengan mengulang indeks 0 hingga n-j-1, proses ini untuk membandingkan elemen elemen yang berdekatan, kecuali elemen yang sudah terurut. Selanjutnya memeriksa apakah elemen nama[i] lebih besar secara alfabet daripada elemen berikutnya nama[i+1]. Jika elemen tidak berurutan maka elemen akan ditukar dengan menggunakan variabel tmp = nama[i] untuk menyimpan elemen, kemudian nama[i] = nama[i+1] untuk memindahkan elemen berikutnya ke elemen saat ini. Program ini untuk mengurutkan nama dengan time complexity O(n^2), yang berarti waktu yang dibutuhkan untuk mengurutkan akan meningkat seiring dengan jumlah elemen(n). 
+ 
 
 
 
@@ -318,7 +318,7 @@ int main() {
 
 
 
-Program diatas digunakan untuk mengurutkan data karakter secara ascending dan descending. Algoritma program ini berkerja dengan membandingkan elemen yang berdekatan dan menukarnya jika tidak berurutan, dan proses ini dilakukan secara terus menerus hingga mendapatkan data yang diinputkan terurut. Program ini akan meminta user untuk memasukan jumlah karakter n dan memasukannya satu persatu kemudian disimpan dalam karakter. 
+Program diatas digunakan untuk mengurutkan data karakter secara ascending dan descending. Algoritma program ini berkerja dengan membandingkan elemen yang berdekatan dan menukarnya jika tidak berurutan, dan proses ini dilakukan secara terus menerus hingga mendapatkan data yang diinputkan terurut. Program ini akan meminta user untuk memasukan jumlah karakter n dan memasukannya satu persatu kemudian disimpan dalam karakter. Pada program ini memiliki 5 langkah, langkah pertama program ini akan meminta memasukan jumlah karakter(n) dan n karakter : O(n), kemudia langkah kedua menggunakan algoritma sort: O(n log n), langkah ketiga yaitu menampilkan hasil sorting ascending: O(n), langkah keempat yaitu untuk sorting descending O(n) dan O(n log n), langkah terakhir untuk menampilkan mencetak hasil sorting descending: O(n). Maka total time complexity dari program diatas yaitu O(n) + O(n log n) + O(n) + O(n) + O(n log n) = 2O(n) + 2O(n log n), maka disimpulkan time complexity nya yaitu O(n log n) dan termasuk dalam Logarithmic time complexity. 
 
 
 
