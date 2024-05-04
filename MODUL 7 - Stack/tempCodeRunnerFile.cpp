@@ -1,111 +1,72 @@
-#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-using namespace std;
+char* stack;
+int top = -1;
 
-string arrayBuku[5];
-int maksimal = 5, top = 0;
-
-bool isFull() {
-    return (top == maksimal);
+// Fungsi Push
+void push(char ele) {
+    stack[++top] = ele;
 }
 
-bool isEmpty() {
-    return (top == 0);
+// Fungsi Pop
+char pop() {
+    return stack[top--];
 }
 
-void pushArrayBuku(string data) {
-    if (isFull()) {
-        cout << "Data telah penuh" << endl;
+// Fungsi untuk mengecek palindrome atau bukan
+int isPalindrome(char str[]) {
+    int length = strlen(str);
+
+    // Mengalokasikan memori secara dinamis untuk stack berdasarkan panjang string
+    stack = (char*)malloc(length * sizeof(char));
+    if (stack == NULL) {
+        printf("Alokasi memori gagal!\n");
+        return -1; // Indikasi erorr
     }
 
-    else {
-        arrayBuku[top] = data;
-        top++;
+    int mid = length / 2;
+
+
+    for (int i = 0; i < mid; i++) {
+        push(str[i]);
     }
-}
 
-void popArrayBuku() {
-    if (isEmpty()) {
-        cout << "Tidak ada data yang dihapus" << endl;
-    } else {
-        arrayBuku[top - 1] == "";
-        top--;
+    // Lewati karakter tengah untuk string yang berukuran ganjil
+    if (length % 2 != 0) {
+        mid++;
     }
-}
 
-
-void peekArrayBuku(int posisi) {
-    if (isEmpty()) {
-        cout << "Tidak ada data yang bisa dilihat" << endl;
-    } else {
-        int index = top;
-        for (int i = 1; i <= posisi; i++) {
-            index--;
+    // Membandingkan seluruh karakter sampai akhir
+    while (str[mid] != '\0') {
+        char ele = pop();
+        if (ele != str[mid]) {
+            return 0; // Bukan palindrome
         }
-
-        cout << "Posisi ke " << posisi << " adalah "  << arrayBuku[index] << endl;
+        mid++;
     }
+
+    free(stack); //  Mendealokasikan memori yang digunakan untuk stack untuk mencegah kebocoran memori.
+    return 1; // Palindrome
 }
 
-int countStack() {
-    return top;
-}
+int main() {
+    char str[100]; // Mengatur maximum panjang string
 
-void changeArrayBuku(int posisi, string data) {
-    if (posisi > top) {
-        cout << "Posisi melebihi data yang ada" << endl;
-    } else {
-        int index = top;
-        for (int i = 1; i <= posisi; i++) {
-            index--;
-        }
-        arrayBuku[index] = data;
+    printf("Masukan Kalimat: ");
+    fgets(str, sizeof(str), stdin);
+
+    //  Menghapus karakter baris baru berlebih (jika ada)
+    str[strcspn(str, "\n")] = '\0';
+
+    if (isPalindrome(str) == 1) {
+        printf("%s adalah palindrome.\n", str);
+    } else if (isPalindrome(str) == 0) {
+        printf("%s bukan palindrome.\n", str);
+    } else { 
+        printf("Erorr.\n");
     }
-}
 
-void destroyArrayBuku() {
-    for (int i = top; i > 0; i--) {
-        arrayBuku[i] = "";
-    }
-    top = 0;
-}
-
-void cetakArrayBuku() {
-    if (isEmpty()) {
-        cout << "Tidak ada data yang 70 dicetak" << endl;
-    } else {
-        for (int i = top - 1; i >= 0; i--) {
-            cout << arrayBuku[i] << endl;
-        }
-    }
-}
-
-int main () {
-    pushArrayBuku("Kalkulus");
-    pushArrayBuku("Struktur Data");
-    pushArrayBuku("Matematika Diskrit");
-    pushArrayBuku("Dasar Multimedia");
-    pushArrayBuku("Inggris");
-
-    cetakArrayBuku();
-    cout << "\n";
-
-    cout << "Apakah data stack suda penuh?" << isFull() << endl;
-    cout << "Apakah data stack kososng?" << isEmpty() << endl;
-
-    peekArrayBuku(2);
-    popArrayBuku();
-    
-    cout << "Banyakanya Data = " << countStack() << endl;
-    changeArrayBuku(2, "Bahasa Jerman");
-    cetakArrayBuku();
-
-    cout << "\n";
-
-    destroyArrayBuku();
-    cout << "Jumlah data setelah dihapus: " << top << endl;
-    cetakArrayBuku();
     return 0;
 }
-
-
