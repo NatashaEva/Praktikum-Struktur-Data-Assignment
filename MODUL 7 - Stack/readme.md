@@ -341,7 +341,8 @@ int main() {
 Kode diatas merupakan program yang digunakan untuk membalikan kalimat yang dimasukan oleh user menggunakan struktur data stack. Dalam program ini terdapat beberapa fungsi yaitu fungsi buatStack yang digunakan untuk menyediakan memori untuk struktur data stack, fungsi isEmpty untuk memeriksa apakah stack kosong atau tidak, fungsi isFull untuk memeriksa apaka stack penuh atau tidak, fungsi push untuk menambahkan elemen ke array, fungsi pop untuk menghapus elemen teratas(top) dari array, dan fungsi balikKata untuk menerima input kalimat dan panjang kalimat. Program ini akan membaca kalimat yang dimasukan user kemudian membuat stack baru menggunakan fungsi buatStack, kemudian memasukan tiap karakter dalam stack dengan fungsi push, lalu melakukan looping hingga stack kosong lalu dikeluarkan dari stack dengan fungsi pop dan membalikan urutan karakter dalam stack. 
 
 
-
+## Kesimpulan
+Stack adalah struktur data yang ditandai dengan tempat penyisipan/penambahan dan penghapusan elemen data yang terjadi hanya disatu tempat yang disebut puncak (top) tumpukan, yang mana data yang terakhir kali masuk ke dalam stack adalah yang pertama kali akan keluar. Stack harus memiliki operasi-operasi yaitu push, pop, clear, IsEmpty, IsFull, dan Retrive.
 
 
 ## Referensi
