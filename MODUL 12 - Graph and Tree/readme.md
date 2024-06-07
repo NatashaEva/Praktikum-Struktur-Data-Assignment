@@ -259,7 +259,7 @@ int main() {
 ![image](https://github.com/NatashaEva/Praktikum-Struktur-Data-Assignment/assets/161322715/5e5284a6-6fa3-4c0a-9626-93e7b408c1cf)
 
 #### Full code screenshots:
-![image](https://github.com/NatashaEva/Praktikum-Struktur-Data-Assignment/assets/161322715/13bd4392-f3ef-4a89-9717-6b5e32c2e85d)
+![image](https://github.com/NatashaEva/Praktikum-Struktur-Data-Assignment/assets/161322715/2e4530ce-76a1-4590-97e4-bbcf6799ad50)
 
 
 Kode diatas merupakan program graph yang memungkinkan user menentukan jumlah simpul (node) dan bobot (jarak) antar simpul. Program ini akan meminta pengguna untuk memasukan jumlah simpul (node) dalam graph yang akan disimpan dalam variabel 'numNodes', lalu meminta memasukan nama setiap node yang akan disimpan di 'nodes' dan bobotnya antar node. 
